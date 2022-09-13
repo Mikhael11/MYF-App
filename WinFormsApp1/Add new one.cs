@@ -32,7 +32,7 @@ namespace MYF_APP
 
         private void btnAddone_Click(object sender, EventArgs e)
         {
-            query = "insert into myfdb (Name,Age,Number,Address) values ('" + txtname.Text + "','" + txtlev.Text + "' , '" + txtnum.Text + "','"+ txtaddress.Text +"')";
+            query = "insert into myf (Name,Age,Number,Address) values (N'" + txtname.Text + "',N'" + txtlev.Text + "' , N'" + txtnum.Text + "',N'"+ txtaddress.Text +"')";
             fn.setData(query);
             txtname.Clear();
             txtnum.Clear();

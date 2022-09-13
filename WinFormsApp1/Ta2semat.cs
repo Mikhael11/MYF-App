@@ -51,7 +51,7 @@ namespace WinFormsApp1
         {
             listBox1.Items.Clear();
             String category = guna2ComboBox1.Text;
-            query = "Select Name from myfdb Where Age = '" + category + "'";
+            query = "Select Name from myf Where Age = N'" + category + "'";
             showItemList(query);
         }
         private void showItemList(String query)
@@ -68,7 +68,7 @@ namespace WinFormsApp1
         {
             listBox1.Items.Clear();
             String category = guna2ComboBox1.Text;
-            query = "Select itname from items Where category = '" + category + "' and itname like'" + txtraba.Text + "%'";
+            query = "Select Name from myf Where Age = N'" + category + "' and Name like N'" + txtraba.Text + "%'";
 
             using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["database"].ConnectionString))
             {
@@ -89,6 +89,16 @@ namespace WinFormsApp1
                     }
                 }
             }
+        }
+
+        private void listBox5_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnpush_Click(object sender, EventArgs e)
+        {
+            listBox2.Items.Add(listBox1.SelectedItem);
         }
     }
 }
